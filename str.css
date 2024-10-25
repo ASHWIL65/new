@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@900&display=swap');
+body{
+    margin: 0;
+    background-color: #000;
+    color: #eee;
+    font-family: Poppins;
+}
+header{
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px;
+    position: relative;
+    z-index: 10;
+}
+.banner{
+    background-image: 
+    linear-gradient(
+        to bottom, #0009, transparent, #0009
+    ),
+    url(img.jpg);
+    width: 100%;
+    height: 70vh;
+    margin-top: -70px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.banner::after{
+    position: absolute;
+    content: '';
+    inset: 0 0 0 0;
+    background-image: url(image/1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.banner .content{
+    position: absolute;
+    inset: 0 0 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Gabarito', cursive;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+.banner .content div:nth-child(1){
+    font-size: 3em;
+    
+}
+.banner .content div:nth-child(2){
+    font-size: 15em;
+    color: transparent;
+    -webkit-text-stroke:1px #fff;
+    background:url(back.png);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation:back 20s linear infinite;
+    }
+
+    @keyframes back{
+      100%{
+        background-position: 2000px 0;
+      }
+    }
+.banner .content div button{
+    border: 1px solid #eee7;
+    background-color: transparent;
+    color: #eee;
+    padding: 10px 20px;
+    letter-spacing: 5px;
+}
+@media screen and (max-width: 1200px) {
+    .banner .content{
+        font-size: 9px;
+    }
+}
+@media screen and (max-width: 992px) {
+    .banner .content{
+        font-size: 7px;
+    }
+}
+@media screen and (max-width: 678px) {
+    .banner .content{
+        font-size: 4px;
+    }
+}
+
+.box{
+  background-color:rgba(255,255,255,0.3);
+  height:400px;
+  width:90%;
+  border-radius:50px;
+  backdrop-filter:blur(20px);
+  background-image:linear-gradient(
+    120deg,
+    rgba(255,255,255,0.4),
+    rgba(0,0,0,0.4)
+    );
+    background-size:30px;
+    margin-left:75px;
+  }
+
+  .container{
+    display: inline-block;
+  }
+
+  .text{
+    font-size:3em;
+    letter-spacing: 10px;
+    font-family:monospace;
+    border-right:5px solid;
+    width:100%;
+    white-space:nowrap;
+    overflow:hidden;
+    animation:
+    typing 2s steps(18),
+    text 3s 1,
+    cursor .4s step-end infinite alternate;
+  }
+
+  @keyframes cursor{
+    50%{border-color:transparent}
+  }
+  
+  @keyframes typing{
+    from{width:0}
+  }
+
+  @keyframes text{
+    0%{color:black;
+    margin-bottom:-40px;}
+    30%{
+      letter-spacing:25px;
+      margin-bottom:-40px;
+    }
+  }
