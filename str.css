@@ -139,3 +139,13 @@ header{
       margin-bottom:-40px;
     }
   }
+
+  .log a{
+    color:white;
+    text-decoration:none;
+    transition:0.4s ease-in-out;
+  }
+
+  .log a:hover{
+    color:orange;
+  }
